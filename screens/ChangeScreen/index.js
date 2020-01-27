@@ -12,7 +12,7 @@ export const goToAuth = () => Navigation.setRoot({
               bottomTab: {
                 fontSize: 12,
                 text: 'Sign In',
-                icon: require('../../icon/home-color.png')
+                icon: require('../../icon/area-color.png')
               }
             }
           }
@@ -36,15 +36,61 @@ export const goToAuth = () => Navigation.setRoot({
 
 export const goHome = () => Navigation.setRoot({
   root: {
-        stack: {
-          id: 'App',
-        children: [
-            {
-                component: {
-                    name: 'HomeScreen',
-                }
+    bottomTabs: {
+      id: 'BottomTabsId',
+      children: [
+        {
+          component: {
+            name: 'HomeScreen',
+            options: {
+              bottomTab: {
+                fontSize: 12,
+                text: 'Home',
+                icon: require('../../icon/home-color.png')
+              }
             }
-        ],
-        }
+          }
+        },
+        {
+          component: {
+            name: 'RecipeScreen',
+            options: {
+              bottomTab: {
+                fontSize: 12,
+                text: 'Recipe',
+                icon: require('../../icon/category-color.png')
+              }
+            }
+          }
+        },
+        {
+          component: {
+            name: 'SettingsScreen',
+            options: {
+              bottomTab: {
+                fontSize: 12,
+                text: 'Settings',
+                icon: require('../../icon/settings.png')
+              }
+            }
+          }
+        },
+      ],
     }
+  }
 });
+
+// export const goHome = () => Navigation.setRoot({
+//   root: {
+//         stack: {
+//           id: 'App',
+//         children: [
+//             {
+//                 component: {
+//                     name: 'HomeScreen',
+//                 }
+//             }
+//         ],
+//         }
+//     }
+// });
